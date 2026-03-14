@@ -1,0 +1,83 @@
+---
+title: "Getting Started with MDX Blog Pipeline"
+description: "Learn how to set up a minimal MDX blog with Next.js App Router, custom components, and automated linting."
+tags: ["MDX", "Next.js", "guide"]
+date: "2026-03-14"
+---
+
+This starter gives you a production-ready MDX blog pipeline with custom components, rehype/remark plugins, and an article linter — all in a minimal setup.
+
+## What You Get
+
+- **File-based routing** — drop `.mdx` files in `content/posts/` and they appear as blog posts
+- **Custom components** — `<Callout>` for alerts, terminal-style code blocks with copy button
+- **rehype/remark plugins** — GitHub-flavored markdown, auto heading IDs, external link handling
+- **Article linter** — checks frontmatter, code fences, tag casing, and more
+
+<Callout type="tip">
+Run `npm run lint` to check all articles before publishing.
+</Callout>
+
+## Adding a New Post
+
+Create a new `.mdx` file in `content/posts/`:
+
+```bash
+touch content/posts/my-new-post.mdx
+```
+
+Add the required frontmatter:
+
+```yaml
+---
+title: "My New Post"
+description: "A short description for SEO"
+tags: ["React", "TypeScript"]
+date: "2026-03-14"
+---
+```
+
+Then write your content using standard markdown plus custom components.
+
+## Using Custom Components
+
+### Callout
+
+Four types are available:
+
+<Callout type="info">
+Use `info` for supplementary information.
+</Callout>
+
+<Callout type="warn">
+Use `warn` for important warnings the reader should not miss.
+</Callout>
+
+### Code Blocks
+
+Code blocks are automatically rendered with a terminal-style wrapper, language label, and copy-to-clipboard button.
+
+```tsx
+export function Hello({ name }: { name: string }) {
+  return <h1>Hello, {name}!</h1>;
+}
+```
+
+## Linter Rules
+
+The built-in linter (`npm run lint`) checks:
+
+| Rule | What it checks |
+|------|---------------|
+| `frontmatter` | Required fields: title, description, tags, date |
+| `callout-count` | Max 4 Callouts per article |
+| `broken-bold` | Space required after `**bold**` before CJK characters |
+| `unclosed-fence` | All ``` code blocks must be closed |
+| `last-h2` | Last H2 must be "Wrapping Up" |
+| `tag-case` | Tags match `canonical-tags.json` casing |
+
+Run `npm run lint:fix` to auto-fix tag casing issues.
+
+## Wrapping Up
+
+This pipeline is extracted from the architecture behind [32blog.com](https://32blog.com), which manages 120+ articles. Fork it, customize it, and start writing.

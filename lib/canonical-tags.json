@@ -1,0 +1,11 @@
+{
+  "next.js": "Next.js",
+  "react": "React",
+  "typescript": "TypeScript",
+  "javascript": "JavaScript",
+  "tailwind css": "Tailwind CSS",
+  "mdx": "MDX",
+  "seo": "SEO",
+  "tutorial": "tutorial",
+  "guide": "guide"
+}
