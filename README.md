@@ -1,3 +1,5 @@
+![CI](https://github.com/omitsu-dev/mdx-blog-pipeline/actions/workflows/ci.yml/badge.svg)
+
 # mdx-blog-pipeline
 
 Minimal MDX blog pipeline with Next.js App Router — rehype/remark plugins, custom components, and article linter.
