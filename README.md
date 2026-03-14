@@ -126,7 +126,7 @@ Edit `lib/canonical-tags.json`:
 
 | Package | Version |
 |---------|---------|
-| Next.js | 15.x |
+| Next.js | 16.x |
 | next-mdx-remote | 5.x |
 | React | 19.x |
 | Tailwind CSS | 4.x |
